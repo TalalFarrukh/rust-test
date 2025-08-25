@@ -1,29 +1,38 @@
 use std::io;
 
+//Note: Please comment out the questions you are not working on to avoid errors.
+
 fn main() {
+    // Question 1
+    sum_of_squares(5);
+
+    // Question 2
+    let person_1: (&str, i32, f32, bool) = ("Talal", 24, 1.88, false);
+    custom_message(person_1.0, person_1.1, person_1.2, person_1.3);
+    
+    // Question 3
+    let array = [3,2,6,4,5,8,2];
+    let slice_of_array = &array[..];
+    let result = min_max_avg(slice_of_array);
+    println!("{:?}", result);
+
+    // Question 4
+    guessing_game();
+
+    // Question 5
+    let text = String::from("hi");
+    let new_text = repeat_string(text);
+    println!("{}", new_text);
+
+    // Question 6
+    let mut text_two = String::from("POTATO!");
+    append_exclamation(&mut text_two);
+    println!("{}", text_two);
+
+    // Question 7
     let text_three = String::from("RUST!");
     let new_text_three = process_word(&text_three);
     println!("{}", new_text_three);
-
-    // let mut text_two = String::from("POTATO!");
-    // append_exclamation(&mut text_two);
-    // println!("{}", text_two);
-
-    // let text = String::from("hi");
-    // let new_text = repeat_string(text);
-    // println!("{}", new_text);
-
-    // guessing_game();
-
-    // let array = [3,2,6,4,5,8,2];
-    // let slice_of_array = &array[..];
-    // let result = min_max_avg(slice_of_array);
-    // println!("{:?}", result);
-
-    // let person_1: (&str, i32, f32, bool) = ("Talal", 24, 1.88, false);
-    // custom_message(person_1.0, person_1.1, person_1.2, person_1.3);
-
-    // sum_of_squares(5);
 }
 
 fn process_word(word: &String) -> String {
